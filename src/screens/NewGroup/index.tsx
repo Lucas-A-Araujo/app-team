@@ -6,26 +6,28 @@ import { Highlight } from "@components/Highlight";
 import { Input } from "@components/Input";
 
 export function NewGroup() {
-  return (
-    <Container>
-      <Header showBackButton />
+    return (
+        <Container>
+            <Header showBackButton />
 
-      <Content>
-        <Icon />
+            <Content>
+                <Icon />
 
-        <Highlight 
-          title="Novo time"
-          subtitle="crie o time para adicionar as pessoas"
-        />
+                <Highlight
+                    title="Novo time"
+                    subtitle="crie o time para adicionar as pessoas"
+                />
 
-        <Input />
+                <Input
+                    placeholder="Nome da turma"
+                />
 
 
-        <Button 
-          title="Criar"
-          style={{ marginTop: 20 }}
-        />
-      </Content>
-    </Container>
-  )
+                <Button
+                    title="Criar"
+                    style={{ marginTop: 20 }}
+                />
+            </Content>
+        </Container>
+    )
 }
