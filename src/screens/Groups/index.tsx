@@ -1,3 +1,4 @@
+import { GroupCard } from '@components/GroupCard';
 import { Header } from '@components/Header';
 import { Highlight } from '@components/Highlight';
 
@@ -8,9 +9,12 @@ export function Groups() {
     <Container>
       <Header />
       <Highlight 
-        title="Turmas"
-        subtitle="jogue com a sua turma"
+        title="Times"
+        subtitle="jogue com seu Time"
       />
+
+      <GroupCard 
+        title="Dead by daylight" />
     </Container>
   );
 }
