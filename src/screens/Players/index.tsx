@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FlatList, Alert } from 'react-native'
 import { useRoute } from '@react-navigation/native';
 
@@ -47,6 +47,7 @@ export function Players() {
 
     try {
       await playerAddByGroup(newPlayer, group);
+      await fetchPlayersByTeam();
 
     } catch (error) {
       if(error instanceof AppError){
@@ -67,6 +68,10 @@ export function Players() {
       Alert.alert('Pessoas', 'Não foi possível carregar as pessoas do time selecionado.');
     }
   }
+
+  useEffect(() => {
+    fetchPlayersByTeam();
+  },[team])
 
 
   return (
